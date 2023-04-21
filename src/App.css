@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    z-index: 1;
+}
+.logo{
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 50px;
+    margin: 20px;
+}
+.nav-links{
+    margin: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+.spacex-background{
+    width: 100%;
+}
+.centered-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #9f9dc6;
+    text-align: center;
+}
+.item{
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+.ship-image{
+    max-width: 100%;
+    max-height: 100%;
+}
+span{
+    color: #c89a03;
+}
+.launchesppast-title{
+    margin: 20px;
+}
+.mission-name-link{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.handle-back{
+    border: none;
+    padding: 10px 20px;
+    background: lightsteelblue;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: 10px 0px 20px 20px;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+}
+.pagination-item{
+    padding:10px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.active-pagination-item{
+    background-color: rgb(47, 133, 238);
+}
+.wiki-link{
+    text-decoration: none;
+}
+#loading-bar-spinner.spinner {
+    left: 50%;
+    margin-left: -20px;
+    top: 50%;
+    margin-top: -20px;
+    position: absolute;
+    z-index: 19 !important;
+    animation: loading-bar-spinner 400ms linear infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#loading-bar-spinner.spinner .spinner-icon {
+    width: 40px;
+    height: 40px;
+    border:  solid 4px transparent;
+    border-top-color:  #00C8B1 !important;
+    border-left-color: #00C8B1 !important;
+    border-radius: 50%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@keyframes loading-bar-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.rocket-details-container{
+    margin-left: 20px;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media (min-width: 280px) and (max-width: 653px) {
+    .nav {
+      display: none;
+    }
+    .grid-container{
+        grid-template-columns: auto;
+        grid-gap: 50px;
+        margin: 20px;
+    }
 }
